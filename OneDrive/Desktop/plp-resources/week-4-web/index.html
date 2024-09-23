@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form action="#">
+          <h2>Sign up</h2>
+          <div class="form-group">
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="full name"
+              onchange="namValidation ()"
+            />
+            <label for="name">Full name</label>
+          </div>
+          <span class="validation" id="v-name"></span>
+          <div class="form-group">
+            <input type="email" id="email" required placeholder="Email" />
+            <label for="email">Email</label>
+          </div>
+          <span class="validation" id="v-email"></span>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="Password"
+              onchange="passwordValidation()"
+            />
+            <label for="password">password</label>
+          </div>
+          <span class="validation" id="v-password"></span>
+          <div class="form-group">
+            <input
+              type="password"
+              id="confirm-password"
+              required
+              placeholder="confirm password"
+            />
+            <label for="confirm-password">confirm password</label>
+          </div>
+          <span class="validation" id="v-confirm"></span>
+          <div class="form-group">
+            <input type="number" id="age" required placeholder="Age" />
+            <label for="age">age</label>
+          </div>
+          <span class="validation" id="v-age"></span>
+          <label for="radios">
+            <input type="radio" id="male" name="male/female" required />
+            <label for="male" name="male/female">male</label>
+            <input type="radio" id="female" name="male/female" required />
+            <label for="female" name="male/female">female</label>
+          </label>
+          <span class="validation hidden" id="v-gender">Form has been submitted &#9989;</span>
+          <label for="countries">country</label>
+          <select name="countries" id="countries" required>
+            <option value="Nigeria">Nigeria</option>
+            <option value="kenya">kenya</option>
+            <option value="south africa">south africa</option>
+            <option value="uganda">uganda</option>
+            <option value="ghana">ghana</option>
+            <option value="mali">mali</option>
+            <option value="togo">togo</option>
+            <option value="egypt">egypt</option>
+          </select>
+
+          <label for="t&c">
+            <input type="checkbox" name="" id="t&c"/> terms and
+            conditions
+          </label>
+          <span class="validation" id="v-check"></span>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
